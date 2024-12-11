@@ -19,32 +19,36 @@ public class Bank{
             System.out.println("******************************************************************");
 
 
-            if( choice == 1 ){
-                System.out.println("Enter Deposit Amount :");
-                amount = sc.nextDouble();
-                c.deposit(amount);
-                System.out.println("******************************************************************");
-            }else if( choice == 2){
-                try{
-                    System.out.println(" Enter Deposit Amount :");
+            switch (choice) {
+                case 1 -> {
+                    System.out.println("Enter Deposit Amount :");
                     amount = sc.nextDouble();
-                    c.withdraw(amount);
-                System.out.println("******************************************************************");
-                }
-                catch (InsufficientFund e){
-                    System.out.println("Sorry you need to Another"+ e.getAmount()+"rs.");
+                    c.deposit(amount);
                     System.out.println("******************************************************************");
                 }
-            }else if(choice == 3){
-                c.checkBalance();
-                System.out.println("******************************************************************");
-            }else if(choice == 4){
-                System.out.println(" Thank you for using our services.");
-                System.out.println("******************************************************************");
-            }
-            else{
-                System.out.println("Invalid Choice. Please Try Again.");
-                System.out.println("******************************************************************");
+                case 2 -> {
+                    try {
+                        System.out.println(" Enter Deposit Amount :");
+                        amount = sc.nextDouble();
+                        c.withdraw(amount);
+                        System.out.println("******************************************************************");
+                    } catch (InsufficientFund e) {
+                        System.out.println("Sorry you need to Another" + e.getAmount() + "rs.");
+                        System.out.println("******************************************************************");
+                    }
+                }
+                case 3 -> {
+                    c.checkBalance();
+                    System.out.println("******************************************************************");
+                }
+                case 4 -> {
+                    System.out.println(" Thank you for using our services.");
+                    System.out.println("******************************************************************");
+                }
+                default -> {
+                    System.out.println("Invalid Choice. Please Try Again.");
+                    System.out.println("******************************************************************");
+                }
             }
         }
 
