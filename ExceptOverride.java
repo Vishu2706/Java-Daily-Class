@@ -6,8 +6,7 @@ class Ex1{
 }
 
 class Ex2 extends Ex1{
-    void show() throws Exception{
-        super.show();
+    void show() throws exception {
         System.out.println("Show from Ex2");
     }
 }

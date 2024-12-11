@@ -2,9 +2,7 @@ package com.p1;
 
 public class NonDerived {
 
-    public NonDerived
-
-    {
+    public NonDerived() {
         Protection pc = new Protection();
         System.out.println("Non Derived Constructor");
         System.out.println("n =" + pc.n);
