@@ -1,9 +1,11 @@
+package com.collection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
 
-public class ArrayListDemo{
+public class ArrayListDemo {
+
     public static void main(String[] args) {
         ArrayList al = new ArrayList();
         al.add(10);
@@ -22,19 +24,19 @@ public class ArrayListDemo{
         System.out.println(al.remove(4));
         System.out.println("al = " + al);
         al.set(4, 1000);
-        System.out.println("al = "+al);
+        System.out.println("al = " + al);
         Iterator itr = al.iterator();
         System.out.println("------Iterator Elements--------");
-        while(itr.hasNext()){
+        while (itr.hasNext()) {
             System.out.println(itr.next());
         }
         ListIterator litr = al.listIterator();
-        while(litr.hasNext()){
+        while (litr.hasNext()) {
             System.out.println(litr.next());
         }
         System.out.println("------List iterator in reverse element");
 
-        while(litr.hasPrevious()){
+        while (litr.hasPrevious()) {
             System.out.println(litr.previous());
         }
     }
